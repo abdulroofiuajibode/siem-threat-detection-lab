@@ -1,0 +1,20 @@
+<group name="windows_authentication,custom_detection">
+
+  <rule id="100100" level="10" frequency="3" timeframe="120">
+    <if_matched_sid>60122</if_matched_sid>
+
+    <description>
+      Windows: Multiple failed authentication attempts detected - possible password guessing
+    </description>
+
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+
+    <group>
+      authentication_failed,password_guessing
+    </group>
+
+  </rule>
+
+</group>
